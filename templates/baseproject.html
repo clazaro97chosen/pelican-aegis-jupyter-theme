@@ -46,8 +46,8 @@
     <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/libs/bootstrap-4.2.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/libs/fontawesome-free-5.2.0-web/css/all.min.css">
     {% endif %}
-    <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/custom.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/ipynb.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/projects.css" media="screen">
+
 
     <style>
         #progressBar::-webkit-progress-value {
@@ -173,16 +173,15 @@ tex2jax: { inlineMath: [["$","$"],["\\(","\\)"]] },
         });
     </script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <!-- Third party plugin JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="{{ SITEURL }}/theme/js/scripts.js"></script>
 
-    <script type="text/javascript" src="{{ SITEURL }}/theme/js/custom.js"></script>
-    {% block script %}
-    <script>
-        function validateForm(query) {
-            return (query.length > 0);
-        }
-    </script>
-    {% endblock script %}
-    {% include '_includes/stat_counter.html' %}
+
+
 </body>
 
 </html>

@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ super() }}
+{% endblock title %}
+
+{% block meta_tags_in_head %}
+{{ super() }}
+<link rel="canonical" href="{{ SITEURL }}/{{ READS_PAGE }}">
+<meta property="og:title" content="{{ READS_PAGE_TITLE }} | {{ SITENAME|striptags|e }}" />
+<meta name="twitter:title" content="{{ READS_PAGE_TITLE }} | {{ SITENAME|striptags|e }}" />
+<meta property="og:url" content="{{ SITEURL }}/{{ READS_PAGE }}" />
+<meta property="og:description" content="{{ READS_PAGE_DESCRIPTION }}" />
+<meta name="twitter:description" content="{{ READS_PAGE_DESCRIPTION }}" />
+<meta property="og:site_name" content="{{ SITENAME|striptags|e }}" />
+<meta property="og:article:author" content="{{ AUTHOR }}" />
+{% from '_includes/_defaults.html' import FEATURED_IMAGE with context %}
+{% if FEATURED_IMAGE %}
+<meta property="og:image" content="{{ FEATURED_IMAGE }}" />
+<meta name="twitter:image" content="{{ FEATURED_IMAGE }}" />
+{% endif %}
+{% endblock meta_tags_in_head %}
+
+{% block content %}
+<div id="wrap">
+    <div id="post-container" class="container post index list">
+        <article>
+            <div class="h2 mt-3 title text-center mb-5 pop-over">List of Books I've Read</div>
+            <hr>
+            <ul class="double-list">
+                <li>
+                    <a
+                        href='https://www.manning.com/books/natural-language-processing-in-action?query=natural%20langue'>
+                        <h2>Natural Language Processing In Action</h2>
+
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href='https://www.manning.com/books/learn-docker-in-a-month-of-lunches#:~:text=Learn%20Docker%20in%20a%20Month%20of%20Lunches%20is%20an%20accessible,microservices%20to%20handling%20legacy%20systems.'>
+                        <h2>Learn Docker in a Month of Lunches</h2>
+
+                    </a>
+                </li>
+                <li>
+                    <a href='https://www.amazon.com/Hands-Machine-Learning-Scikit-Learn-TensorFlow/dp/1492032646/'>
+                        <h2>Hands On Machine Learning with Scikit-Learn, Keras & Tensorflow</h2>
+
+                    </a>
+                </li>
+                <li>
+                    <a href='https://www.amazon.com/gp/product/B003V8B5XO/'>
+                        <h2>Atlas Shrugged</h2>
+
+                    </a>
+                </li>
+                <li>
+                    <a href='https://www.amazon.com/How-Solve-Aspect-Mathematical-Method-ebook/dp/B0073X0IOA'>
+                        <h2>How to Solve It (a new aspect of mathematical method)
+                        </h2>
+
+                    </a>
+                </li>
+                <li>
+                    <a href='https://www.amazon.com/The-Power-of-Habit-Charles-Duhigg-audiobook/dp/B007EJSMC8/'>
+                        <h2>The Power of Habit</h2>
+
+                    </a>
+                </li>
+                <li>
+                    <a href='https://www.amazon.com/dp/B076B1QF3T/'>
+                        <h2>The Complete Sherlock Holmes</h2>
+
+                    </a>
+                </li>
+                <li>
+                    <a href='https://www.amazon.com/Mind-Numbers-Science-Flunked-Algebra/dp/039916524X/'>
+                        <h2>A Mind for Numbers</h2>
+
+                    </a>
+                </li>
+                <li>
+                    <a href='https://www.amazon.com/Data-Science-Transform-Visualize-Model/dp/1491910399/'>
+                        <h2>R for Data Science</h2>
+
+                    </a>
+                </li>
+                <li>
+                    <a href='https://www.amazon.com/Lady-Tasting-Tea-Statistics-Revolutionized/dp/0805071342/'>
+                        <h2>The Lady Tasting Tea</h2>
+
+                    </a>
+                </li>
+                <li>
+                    <a href='https://www.amazon.com/Maximum-Achievement-first-Text-Only/dp/B004NVSIR4/'>
+                        <h2>Maximum Achievement</h2>
+
+                    </a>
+                </li>
+
+            </ul>
+            <div class="mt-4"></div>
+        </article>
+    </div>
+</div>
+{% endblock content %}
