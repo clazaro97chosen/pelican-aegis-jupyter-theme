@@ -1,83 +1,82 @@
-{% extends 'base.html' %}
-
-{% block title %}
-About {{ AUTHOR_SHORTENED }} | {{ super() }}
-{% endblock title %}
-
-{% block meta_tags_in_head %}
-{{ super() }}
-<link rel="canonical" href="{{ SITEURL }}/{{ ABOUT_PAGE }}">
-<meta property="og:title" content="{{ ABOUT_PAGE_TITLE }} | {{ SITENAME|striptags|e }}" />
-<meta name="twitter:title" content="{{ ABOUT_PAGE_TITLE }} | {{ SITENAME|striptags|e }}" />
+{% extends 'base.html' %} {% block title %} About {{ AUTHOR_SHORTENED }} | {{
+super() }} {% endblock title %} {% block meta_tags_in_head %} {{ super() }}
+<link rel="canonical" href="{{ SITEURL }}/{{ ABOUT_PAGE }}" />
+<meta
+  property="og:title"
+  content="{{ ABOUT_PAGE_TITLE }} | {{ SITENAME|striptags|e }}"
+/>
+<meta
+  name="twitter:title"
+  content="{{ ABOUT_PAGE_TITLE }} | {{ SITENAME|striptags|e }}"
+/>
 <meta property="og:url" content="{{ SITEURL }}/{{ ABOUT_PAGE }}" />
 <meta property="og:description" content="{{ ABOUT_PAGE_DESCRIPTION }}" />
 <meta name="twitter:description" content="{{ ABOUT_PAGE_DESCRIPTION }}" />
 <meta property="og:site_name" content="{{ SITENAME|striptags|e }}" />
 <meta property="og:article:author" content="{{ AUTHOR }}" />
-{% from '_includes/_defaults.html' import FEATURED_IMAGE with context %}
-{% if FEATURED_IMAGE %}
+{% from '_includes/_defaults.html' import FEATURED_IMAGE with context %} {% if
+FEATURED_IMAGE %}
 <meta property="og:image" content="{{ FEATURED_IMAGE }}" />
 <meta name="twitter:image" content="{{ FEATURED_IMAGE }}" />
-{% endif %}
-{% endblock meta_tags_in_head %}
-
-{% block content %}
-<div class="about-profile-banner row align-items-center justify-content-center" align="center"
-    style="background-image: url('{{ SITEURL }}/{{ INDEX_BANNER_IMAGE }}')">
-    <div class="about-content-center pop-over">
-        <div class="cc-profile-image">
-            <a href="#"><img id="about-profile-image" src="{{ SITEURL }}/{{ PROFILE_PHOTO_ABOUT }}"></a>
-        </div>
-        <div class="about-author">{{ AUTHOR }}</div>
-        <p class="about-author-subtitle text-white">{{ AUTHOR_SUBTITLE }}</p>
-        <a class="btn btn-primary aos-init aos-animate" href="{{ RESUME_PDF_LINK }}" data-aos="zoom-in"
-            data-aos-anchor="data-aos-anchor">{{ RESUME_BUTTON_TEXT }}</a>
+{% endif %} {% endblock meta_tags_in_head %} {% block content %}
+<div
+  class="about-profile-banner row align-items-center justify-content-center"
+  align="center"
+  style="background-image: url('{{ SITEURL }}/{{ INDEX_BANNER_IMAGE }}')"
+>
+  <div class="about-content-center pop-over">
+    <div class="cc-profile-image">
+      <a href="#">
+        <img
+          id="about-profile-image"
+          src="{{ SITEURL }}/{{ PROFILE_PHOTO_ABOUT }}"
+        />
+      </a>
     </div>
+    <div class="about-author">{{ AUTHOR }}</div>
+    <p class="about-author-subtitle text-white">{{ AUTHOR_SUBTITLE }}</p>
+    <!-- <a class="btn btn-primary aos-init aos-animate" href="{{ RESUME_PDF_LINK }}" data-aos="zoom-in"
+            data-aos-anchor="data-aos-anchor">{{ RESUME_BUTTON_TEXT }}</a> -->
+  </div>
 </div>
 <div class="section about-button-container no-padding pop-over">
-    <div class="container">
-        <div class=" row justify-content-center">
-            <a class="btn btn-default btn-lg btn-icon about-button mr-3" href="{{ LINKEDIN_LINK }}">
-                <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a class="btn btn-default btn-round btn-lg btn-icon about-button" href="{{ GITHUB_LINK }}">
-                <i class="fab fa-github"></i>
-            </a>
-        </div>
+  <div class="container">
+    <div class="row justify-content-center">
+      <a
+        class="btn btn-default btn-lg btn-icon about-button mr-3"
+        href="{{ LINKEDIN_LINK }}"
+      >
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a
+        class="btn btn-default btn-round btn-lg btn-icon about-button"
+        href="{{ GITHUB_LINK }}"
+      >
+        <i class="fab fa-github"></i>
+      </a>
     </div>
+  </div>
 </div>
 <div class="container post pop-over">
-    <div class="section" id="about" tabindex="-1">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <div class="h2 mt-3 title text-center mb-5">About</div>
-                    <hr>
-                    <p>My name is Cristian Lazaro</p>
-                    <p> Let me tell you a story: I was first introduced to programming in a computer science 101 course
-                        in
-                        college.
-                        I had the impression that this was going to be the hardest thing to learn in my life at the
-                        time. It was a consequence of a fixed mindset, where I as the individual limited myself. But, as
-                        I've come to learn anyone
-                        can learn anything with the right combination of effort, mindset and correct learning
-                        techniques.
-                    </p>
-                    <p> That 101 class was 4 years ago since then I have come to enjoy programming as a hobby and love
-                        the fact that you can build
-                        practically anthing you can dream of. </p>
-                    <p> As for the goal of this website, it is meant to provide a platform for me to
-                        solidify new knowledge I am learning. As well as, provide educational materials for those people
-                        who want to learn data science, machine learning, and software development</p>
-
-                    <p> Well thats enough of me, if you have any questions regarding posts, please address them in the
-                        form of a
-                        Disqus comment in each article. If you have other
-                        personal questions, you can reach me via
-                        <b>ctlazaro9728@gmail.com</b></p>
-                </div>
-            </div>
+  <div class="section" id="about" tabindex="-1">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="h2 mt-3 title text-center mb-5">About</div>
+          <hr />
+          <p>Hey whats up my name is Cristian</p>
+          <p>
+            The goal of this about page is to tell you what this blog is about.
+            On this blog I write tutorials and share advice. I am very grateful
+            for the people that share their knowledge and thought this is a good
+            way of paying it forward for their help. accomplish on this blog. If
+            you have any questions regarding posts, please address them in the
+            form of a Disqus comment in each article. If you have other personal
+            questions, you can reach me via ctlazaro9728@gmail.com.
+          </p>
         </div>
+      </div>
     </div>
+  </div>
 </div>
 {% endblock content %}
